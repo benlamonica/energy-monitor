@@ -2,9 +2,13 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.save
 # C extensions
 *.so
+*.swp
+nohup.out
+energy-monitor.csv
+energy-monitor.csv.1
 
 # Distribution / packaging
 .Python

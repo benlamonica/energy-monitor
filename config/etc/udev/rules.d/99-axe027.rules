@@ -1,0 +1,5 @@
+# /etc/udev/rules.d/99-axe027.rules
+# contains axe027 udev rule to patch default
+# FTDI product id to AXE027 product id (0xbd90)
+#
+ACTION=="add", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="bd90", RUN+="/sbin/modprobe ftdi_sio" RUN+="/bin/sh -c 'echo 0403 bd90 > /sys/bus/usb-serial/drivers/ftdi_sio/new_id'"
